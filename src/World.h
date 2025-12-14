@@ -13,11 +13,12 @@ typedef struct World
 } World;
 
 World* World_init();
-void World_free();
+World* World_clone(World* world);
+void World_free(World* world);
 
 void World_update(World* world);
-Node* World_addNewNode(NodeType type);
-void World_deleteNode(NodeID id);
-Node* World_getNode(NodeID id);
+NodeID World_addNewNode(World* world, NodeType type);
+void World_deleteNode(World* world, NodeID id);
+Node* World_getNode(World* world, NodeID id);
 
 #endif

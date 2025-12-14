@@ -3,6 +3,7 @@
 
 typedef enum NodeType
 {
+    NodeType_None,
     NodeType_Farm,
     NodeType_Factory,
     NodeType_DC,
@@ -11,8 +12,8 @@ typedef enum NodeType
 
 typedef struct NodeID
 {
-    unsigned int id;
     NodeType type;
+    unsigned int id;
 } NodeID;
 
 #define NODE_ID_EQ(a, b)    ((a).id == (b).id && (a).type == (b).type)

@@ -33,7 +33,7 @@ typedef struct WidgetRecipe
 typedef struct WidgetDef
 {
     float decay;
-    float weight;
+    float weight; // represents weight, size... basically how hard it is to move around or store
     WidgetRecipe recipe;
 } WidgetDef;
 
