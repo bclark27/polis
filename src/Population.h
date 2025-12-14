@@ -13,4 +13,8 @@ typedef struct Population
     float wantsSatisfaction; // 1=fully satisfied
 } Population;
 
+void Population_initInPlace(Population* p);
+void Population_freeInPlace(Population* p);
+void Population_update(Population* p);
+
 #endif
